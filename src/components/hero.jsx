@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div>
       {/* Hero Section */}
-<section className="relative overflow-hidden font-poppins bg-bg-main text-text-black mb-10">
+<section className="relative overflow-hidden font-poppins bg-bg-main text-text-black mb-0">
   
 
   {/* Main content */}
