@@ -1,5 +1,17 @@
 import React from 'react'
 
+/**
+ * Emergency guidance CTA on services page.
+ *
+ * @description
+ * Highlights 24/7 emergency availability and lists example situations where
+ * immediate veterinary support is recommended.
+ *
+ * @returns {JSX.Element} Two-column emergency callout section.
+ *
+ * @edgecase
+ * The hotline anchor uses `tel:` to trigger a direct call on supported devices.
+ */
 function servicescta() {
   return (
     <div className=''>
@@ -7,7 +19,7 @@ function servicescta() {
   
 
   {/* Main content */}
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 bg-white rounded-2xl">
+  <div className="max-w-7xl px-4 py-24 md:py-32 bg-white rounded-2xl">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       {/* Left content */}
       <div className="text-center md:text-left">
@@ -23,7 +35,7 @@ function servicescta() {
         <p className="text-lg text-gray-600 mb-8 max-w-lg">
 Animal emergencies don't follow a schedule. That's why our emergency veterinary services are available 24 hours a day, 7 days a week. Call us immediately if your animal needs urgent care.        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          <a href="#"
+          <a href="tel:+254700000000"
             className="px-8 py-3.5 rounded-lg btn-gradient text-text-black font-semibold bg-gold-main hover:shadow-xl transition-all duration-300">
            Call our emergency hotline: +254 700 000000
           </a>

@@ -2,14 +2,33 @@
 import { Link } from "react-router-dom"
 import React, { useEffect, useState } from "react"
 
+/**
+ * Emergency CTA section used on the homepage.
+ *
+ * @description
+ * Chooses the primary contact action based on device type:
+ * - Mobile users get a direct `tel:` call action.
+ * - Non-mobile users get a WhatsApp deep link.
+ *
+ * @returns {JSX.Element} CTA block with call/chat and contact message actions.
+ *
+ * @note
+ * Device detection is user-agent based and may not be perfect for all browsers.
+ */
 function Cta() {
     const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
+    /**
+     * Determines whether the client appears to be a mobile device.
+     *
+     * @returns {void}
+     */
     const checkDevice = () => {
       setIsMobile(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent))
     }
 
+    // Run once on mount to choose the most useful contact link format.
     checkDevice()
   }, [])
 

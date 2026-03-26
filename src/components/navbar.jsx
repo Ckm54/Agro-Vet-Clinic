@@ -1,12 +1,32 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
+/**
+ * Top navigation component.
+ *
+ * @description
+ * Displays brand name and primary page links, while highlighting the active
+ * route based on `useLocation()`.
+ *
+ * @returns {JSX.Element} Responsive top navigation bar.
+ *
+ * @note
+ * The menu toggle checkbox is currently present for mobile markup but the
+ * hidden menu remains controlled by utility classes only.
+ */
 function Navbar() {
   const location = useLocation()
   const currentPath = location.pathname
 
+  /**
+   * Builds the CSS class list for nav links.
+   *
+   * @param {string} path - Route path associated with a link.
+   * @returns {string} Class string with active-state styling when matched.
+   */
   const getLinkClass = (path) => {
     const baseClass = "md:p-4 py-3 px-0 block"
+    // Keep active route obvious for quick orientation in multi-page flows.
     return currentPath === path
       ? `${baseClass} font-bold underline`
       : baseClass

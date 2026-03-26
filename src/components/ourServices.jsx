@@ -2,6 +2,20 @@ import heartIcon from "../homeAssets/heart-Icon.png"
 import diagnosticIcon from "../homeAssets/DiagnosticIcon.png"
 import surgeryIcon from "../homeAssets/surgeryIcon.png"
 import arrowIcon from "../homeAssets/arrowIcon.png"
+
+/**
+ * Homepage "core services" preview section.
+ *
+ * @description
+ * Displays a concise set of primary services and a button to navigate to the
+ * full services page.
+ *
+ * @returns {JSX.Element} Services preview cards with navigation button.
+ *
+ * @edgecase
+ * Navigation currently uses `window.location.href`, which causes a full page
+ * reload. Consider `Link` for SPA-style navigation if desired.
+ */
 function ourServices() {
   return (
    

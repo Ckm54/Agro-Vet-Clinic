@@ -1,5 +1,18 @@
 import React from 'react'
 
+/**
+ * Contact page emergency CTA.
+ *
+ * @description
+ * Emphasizes emergency support availability and provides a direct click-to-call
+ * hotline link.
+ *
+ * @returns {JSX.Element} Emergency callout with telephone action.
+ *
+ * @note
+ * Keep hotline number aligned with values in `cta.jsx` and `servicescta.jsx`
+ * to avoid conflicting contact information.
+ */
 function contactUsCta() {
   return (
     <div>

@@ -2,6 +2,18 @@ import React from 'react'
 import location from "../contactUsAssets/LocationIcon.png"
 import clock from "../contactUsAssets/clock.png"
 
+/**
+ * Contact page location and operations section.
+ *
+ * @description
+ * Presents service coverage, operating hours, and an embedded Google Map.
+ *
+ * @returns {JSX.Element} Service area details with map embed.
+ *
+ * @note
+ * The map uses static coordinates in the iframe URL. Update the `src` query
+ * values when location coordinates change.
+ */
 function ContactUsLocation() {
   return (
     <div>
@@ -61,8 +73,9 @@ function ContactUsLocation() {
                 </div>
               </div>
 
-              <div className="rounded-lg overflow-hidden">
+  <div className="rounded-lg overflow-hidden">
   <iframe
+    title="Vet Zone location map"
     src="https://www.google.com/maps?q=-0.6817,34.7667&hl=en&z=14&output=embed"
     width="100%"
     height="480"

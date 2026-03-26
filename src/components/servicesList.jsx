@@ -9,6 +9,20 @@ import image4 from "./servicesAssets/Mockup wrap (1).png"
 import image5 from "./servicesAssets/Mockup wrap (2).png"
 import image6 from "./servicesAssets/image6.png"
 import image7 from "./servicesAssets/Mockup wrap (4).png"
+
+/**
+ * Detailed services catalog section.
+ *
+ * @description
+ * Renders multiple alternating content blocks that describe veterinary service
+ * categories, each paired with an illustrative image.
+ *
+ * @returns {JSX.Element} Long-form services content layout.
+ *
+ * @note
+ * This component is intentionally content-heavy; if the list grows further,
+ * consider moving section data into arrays and mapping for easier maintenance.
+ */
 function servicesList() {
   return (
     <div>

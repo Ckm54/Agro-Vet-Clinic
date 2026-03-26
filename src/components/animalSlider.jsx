@@ -9,6 +9,20 @@ import dogs from "../homeAssets/Image (48).png"
 import cats from "../homeAssets/Image (49).png"
 import poultry from "../homeAssets/Image (50).png"
 import horsesDonkeys from "../homeAssets/Image (51).png"
+
+/**
+ * Responsive animal showcase slider.
+ *
+ * @description
+ * Displays a looping carousel of animal images using Swiper with autoplay
+ * and manual next/previous controls.
+ *
+ * @returns {JSX.Element} Slider section with heading and navigation buttons.
+ *
+ * @note
+ * `images` and `labels` arrays are index-coupled. Keep both arrays aligned
+ * when adding/removing items to avoid incorrect alt text mapping.
+ */
 function AnimalSlider() {
   const swiperRef = useRef(null)
 
@@ -81,6 +95,7 @@ function AnimalSlider() {
 
             {/* Navigation Buttons */}
             <button
+              // Optional chaining prevents runtime errors before Swiper is ready.
               onClick={() => swiperRef.current?.swiper.slidePrev()}
               className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all"
             >
@@ -88,6 +103,7 @@ function AnimalSlider() {
             </button>
 
             <button
+              // Optional chaining prevents runtime errors before Swiper is ready.
               onClick={() => swiperRef.current?.swiper.slideNext()}
               className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all"
             >

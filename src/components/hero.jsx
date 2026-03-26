@@ -1,6 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import HeroImage from "../homeAssets/homecow-image.jpg"
 
+/**
+ * Homepage hero section.
+ *
+ * @description
+ * Introduces the clinic, service coverage, and primary engagement actions
+ * (talk/contact + WhatsApp quick chat).
+ *
+ * @returns {JSX.Element} Hero section with text content, image, and CTAs.
+ *
+ * @note
+ * "Talk to Us" and "Our Sevices" links route to `/contact` and `/services`.
+ */
 function Hero() {
   return (
     <div>
@@ -27,14 +40,16 @@ function Hero() {
           Professional mobile veterinary services for livestock, pets, and poultry across Kisii, Nyamira, and the entire Nyanza region. From routine check-ups to emergency care, we come to you 24/7.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          <a href="#"
+          <Link
+            to="/contact"
             className="px-8 py-3.5 rounded-lg btn-gradient text-text-black font-semibold bg-gold-main hover:shadow-xl transition-all duration-300">
             Talk to Us
-          </a>
-          <a href="#"
+          </Link>
+          <Link
+            to="/services"
             className="px-8 py-3.5 rounded-lg border-2 border-primary text-primary font-semibold hover:bg-primary/5 transition-all duration-300">
             Our Sevices
-          </a>
+          </Link>
         </div>
 
         

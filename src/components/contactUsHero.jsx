@@ -1,5 +1,13 @@
 import React from 'react'
 
+/**
+ * Contact page hero section.
+ *
+ * @description
+ * Introduces contact options and coverage area at the top of the Contact page.
+ *
+ * @returns {JSX.Element} Contact header section with explanatory copy.
+ */
 function ContactUsHero() {
   return (
   <div className='bg-light-yellow'>
