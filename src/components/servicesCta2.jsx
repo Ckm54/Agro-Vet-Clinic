@@ -24,7 +24,7 @@ function servicesCta2() {
 Contact us today to book a consultation or learn more about our services.    </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         
-        <a href="tel:+917307022824"
+        <a href="/contact"
           className="bg-gold-main text-text-black font-bold py-4 px-8 rounded-xl transition-colors flex items-center justify-center">
           Get In Touch
         </a>

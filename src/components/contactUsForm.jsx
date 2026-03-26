@@ -1,5 +1,7 @@
 import React from 'react'
 import sendMessageIcon from "../contactUsAssets/SendMessageIcon.png"
+import emailjs from "@emailjs/browser"
+import { useRef } from "react"
 
 /**
  * Contact form section.
@@ -19,6 +21,29 @@ import sendMessageIcon from "../contactUsAssets/SendMessageIcon.png"
  * integration; keep them unique to preserve label targeting.
  */
 function ContactUsForm() {
+    const formRef = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID",     // replace
+        "YOUR_TEMPLATE_ID",    // replace
+        formRef.current,
+        "YOUR_PUBLIC_KEY"      // replace
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!")
+        },
+        (error) => {
+          console.error(error)
+          alert("Failed to send message")
+        }
+      )
+  }
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-bg-main py-12 px-4">
       <section className="w-full max-w-2xl">
@@ -33,58 +58,90 @@ function ContactUsForm() {
         </div>
 
         {/* Form */}
-        <form className="space-y-6">
-  <div className="grid grid-cols-2 gap-4">
-    <div>
-      <label htmlFor="firstName" className="mb-2 block text-sm font-medium text-text-black">Full name</label>
-      <input type="text" id="firstName" name="firstName" className="w-full border border-gray-300 rounded-md bg-bg-main px-4 py-3 text-text-black focus:border-transparent focus:ring-2 focus:ring-black focus:outline-none" placeholder="John" required />
-    </div>
-    <div>
-      <label htmlFor="lastName" className="mb-2 block text-sm font-medium text-text-black">Phone number</label>
-      <input type="tel" id="lastName" name="lastName" className="w-full border border-gray-300 rounded-md bg-bg-main px-4 py-3 text-text-black focus:border-transparent focus:ring-2 focus:ring-black focus:outline-none" placeholder="Doe" required />
-    </div>
-  </div>
+        <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
+      
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className="mb-2 block text-sm font-medium text-text-black">
+            Full name
+          </label>
+          <input
+            type="text"
+            name="firstName"
+            className="w-full border border-gray-300 rounded-md bg-bg-main px-4 py-3"
+            placeholder='John Doe'
+            required
+          />
+        </div>
 
-  <div className="grid grid-cols-2 gap-4">
-    <div>
-      <label htmlFor="emailAddress" className="mb-2 block text-sm font-medium text-text-black">Email Address</label>
-      <input
-        type="email"
-        id="emailAddress"
-        name="emailAddress"
-        className="w-full border border-gray-300 bg-bg-main rounded-md px-4 py-3 text-text-black focus:border-transparent focus:ring-2 focus:ring-black focus:outline-none"
-        placeholder="John"
-        required
-      />
-    </div>
-    <div>
-      <label htmlFor="animalType" className="mb-2 block text-sm font-medium text-text-black">Animal type</label>
-      <select id="animalType" name="animalType" className="w-full border border-gray-300 bg-bg-main rounded-md px-4 py-3 text-text-black focus:border-transparent focus:ring-2 focus:ring-black focus:outline-none" required>
-        <option value="">Select animal type</option>
-        <option value="cattle">Cattle</option>
-        <option value="goats_sheep">Goats & Sheep</option>
-        <option value="dogs">Dogs</option>
-        <option value="cats">Cats</option>
-        <option value="poultry">Poultry</option>
-        <option value="horses_donkeys">Horses & Donkeys</option>
-      </select>
-    </div>
-  </div>
+        <div>
+          <label className="mb-2 block text-sm font-medium text-text-black">
+            Phone number
+          </label>
+          <input
+            type="tel"
+            name="phone"
+            className="w-full border border-gray-300 rounded-md bg-bg-main px-4 py-3"
+             placeholder="+254700000000"
+            required
+          />
+        </div>
+      </div>
 
-  <div>
-    <label htmlFor="email" className="mb-2 block text-sm font-medium text-text-black">Message</label>
-    <input type="email" id="email" name="email" className="w-full border border-gray-300 rounded-md bg-bg-main px-4 py-3 text-gray-900 focus:border-transparent focus:ring-2 focus:ring-black focus:outline-none" placeholder="Please describe your inquiry or the services you need..." required />
-  </div>
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label className="mb-2 block text-sm font-medium text-text-black">
+            Email Address
+          </label>
+          <input
+            type="email"
+            name="email"
+            className="w-full border border-gray-300 rounded-md bg-bg-main px-4 py-3"
+            required
+          />
+        </div>
 
-  <button
-  type="submit"
-  className="w-full bg-gold-main rounded-md px-6 py-3 text-sm font-medium text-text-black transition-colors flex items-center justify-center gap-2"
->
-  Send Message
-  <img src={sendMessageIcon} alt="send message" className="w-4 h-4" />
-</button>
+        <div>
+          <label className="mb-2 block text-sm font-medium text-text-black">
+            Animal type
+          </label>
+          <select
+            name="animalType"
+            className="w-full border border-gray-300 rounded-md bg-bg-main px-4 py-3"
+            required
+          >
+            <option value="">Select animal type</option>
+            <option value="Cattle">Cattle</option>
+            <option value="Goats & Sheep">Goats & Sheep</option>
+            <option value="Dogs">Dogs</option>
+            <option value="Cats">Cats</option>
+            <option value="Poultry">Poultry</option>
+            <option value="Horses & Donkeys">Horses & Donkeys</option>
+          </select>
+        </div>
+      </div>
 
-</form>
+      <div>
+        <label className="mb-2 block text-sm font-medium text-text-black">
+          Message
+        </label>
+        <textarea
+          name="message"
+          rows="4"
+          className="w-full border border-gray-300 rounded-md bg-bg-main px-4 py-3"
+          placeholder="Describe your inquiry..."
+          required
+        />
+      </div>
+
+      <button
+        type="submit"
+        className="w-full bg-gold-main rounded-md px-6 py-3 text-sm font-medium text-text-black flex items-center justify-center gap-2"
+      >
+        Send Message
+        <img src={sendMessageIcon} alt="send" className="w-4 h-4" />
+      </button>
+    </form>
 
 
 

@@ -378,7 +378,7 @@ The README should include:
 
 Code structure overview:
 We have the app.js that renders the app, components, here I have the src which has the components used and folders containing assets used for each page."
-    - “@workspace, I am not sure what I am supposed to test in my website. Kiny suggest some of the tings I should test for”
+    - “@workspace, I am not sure what I am supposed to test in my website. Kiny suggest some of the things I should test for”
     - “@workspace write some detailed tests for me”
     - “@workspace Please create comprehensive documentation for my code 
 
