@@ -2,13 +2,13 @@ import React from 'react'
 import heartIcon from "./servicesAssets/Icon.png"
 import diagnosticsIcon from "./servicesAssets/Icon (1).png"
 import surgeryIcon from "./servicesAssets/Icon (2).png"
-import image1 from "./servicesAssets/Screen mockup (REPLACE FILL).png"
-import image2 from "./servicesAssets/Mockup wrap.png"
-import image3 from "./servicesAssets/Screen mockup 3_2 (3).png"
-import image4 from "./servicesAssets/Mockup wrap (1).png"
-import image5 from "./servicesAssets/Mockup wrap (2).png"
-import image6 from "./servicesAssets/image6.png"
-import image7 from "./servicesAssets/Mockup wrap (4).png"
+import pic1 from "./servicesAssets/Screen mockup (REPLACE FILL).png"
+import pic2 from "./servicesAssets/Mockup wrap.png"
+import pic3 from "./servicesAssets/Screen mockup 3_2 (3).png"
+import pic4 from "./servicesAssets/Mockup wrap (1).png"
+import pic5 from "./servicesAssets/Mockup wrap (2).png"
+import pic6 from "./servicesAssets/image6.png"
+import pic7 from "./servicesAssets/Mockup wrap (4).png"
 
 /**
  * Detailed services catalog section.
@@ -138,7 +138,7 @@ function servicesList() {
     <div className="md:w-1/2 w-full">
       <img
         className="w-full h-full object-cover md:rounded-lg rounded-sm"
-        src={image1}
+        src={pic1}
         alt="billboard image"
       />
     </div>
@@ -152,7 +152,7 @@ function servicesList() {
     <div className="md:w-1/2 w-full">
       <img
         className="w-full h-full object-cover md:rounded-lg rounded-sm"
-        src={image2}
+        src={pic2}
         alt="billboard image"
       />
     </div>
@@ -372,7 +372,7 @@ function servicesList() {
     <div className="md:w-1/2 w-full">
       <img
         className="w-full h-full object-cover md:rounded-lg rounded-sm"
-        src={image3}
+        src={pic3}
         alt="billboard image"
       />
     </div>
@@ -386,7 +386,7 @@ function servicesList() {
     <div className="md:w-1/2 w-full">
       <img
         className="w-full h-full object-cover md:rounded-lg rounded-sm"
-        src={image4}
+        src={pic4}
         alt="billboard image"
       />
     </div>
@@ -606,7 +606,7 @@ function servicesList() {
     <div className="md:w-1/2 w-full">
       <img
         className="w-full h-full object-cover md:rounded-lg rounded-sm"
-        src={image5}
+        src={pic5}
         alt="billboard image"
       />
     </div>
@@ -620,7 +620,7 @@ function servicesList() {
     <div className="md:w-1/2 w-full">
       <img
         className="w-full h-full object-cover md:rounded-lg rounded-sm"
-        src={image6}
+        src={pic6}
         alt="billboard image"
       />
     </div>
@@ -837,7 +837,7 @@ function servicesList() {
     <div className="md:w-1/2 w-full">
       <img
         className="w-full h-full object-cover md:rounded-lg rounded-sm"
-        src={image7}
+        src={pic7}
         alt="billboard image"
       />
     </div>
