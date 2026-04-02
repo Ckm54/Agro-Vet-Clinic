@@ -51,7 +51,7 @@ Our team is available 24/7 for emergencies. Don't hesitate to reach out for urge
       }
       target={!isMobile ? "_blank" : "_self"}
       rel="noopener noreferrer"
-      className="bg-border text-text-black font-bold py-4 px-8 rounded-xl transition-colors inline-flex items-center gap-2 hover:bg-gold-main hover:text-white"
+      className="bg-border text-text-black font-bold py-4 px-8 rounded-xl transition-colors inline-flex items-center gap-2 "
     >
       {isMobile ? (
         <>

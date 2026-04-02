@@ -65,7 +65,7 @@ function AnimalSlider() {
               ref={swiperRef}
               modules={[Navigation, Autoplay]}
               autoplay={{
-                delay: 2500,
+                delay: 1800,
                 disableOnInteraction: false,
               }}
               loop={true}
@@ -79,15 +79,15 @@ function AnimalSlider() {
             >
               {images.map((image, idx) => (
                 <SwiperSlide key={idx}>
-                  <div className="relative overflow-hidden rounded-2xl  h-80 md:h-80">
+                  <div className="relative overflow-hidden rounded-2xl  ">
                     <img
                       src={image}
                       alt={labels[idx]}
                       className="w-full h-full object-cover"
                     />
-                    {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white text-sm sm:text-base px-3 py-2 rounded-lg">
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white text-sm sm:text-base px-3 py-2 rounded-lg">
                       {labels[idx]}
-                    </div> */}
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}

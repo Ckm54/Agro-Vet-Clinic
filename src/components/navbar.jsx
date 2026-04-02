@@ -33,11 +33,20 @@ function Navbar() {
   }
 
   return (
-    <div className='bg-bg-main border-b-2 border-border'>
+    <div className='bg-bg-black-main border-b-2 border-border'>
         <header className="lg:px-16 px-4 flex flex-wrap items-center py-4 shadow-md">
     <div className="flex-1 flex justify-between items-center">
-        <a href="#" className="text-xl text-text-color-black font-semibold font-lg ">Vet <span className='text-gold-main'>Zone</span></a>
-    </div>
+  <a
+    href="#"
+    className="text-3xl font-bold tracking-wide text-white transition-all duration-300 hover:scale-105"
+  >
+
+    <span className="bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent ml-1">
+      Mona
+    </span>
+  </a>
+</div>
+
 
     <label htmlFor="menu-toggle" className="pointer-cursor md:hidden block">
       <svg className="fill-current text-gray-900"
@@ -50,7 +59,7 @@ function Navbar() {
 
     <div className="hidden md:flex md:items-center md:w-auto w-full" id="menu">
         <nav>
-            <ul className="md:flex items-center justify-between text-base text-text-color-black font-semibold pt-4 md:pt-0">
+            <ul className="md:flex items-center justify-between text-base text-white font-semibold pt-4 md:pt-0">
                 <li><Link className={getLinkClass('/')} to="/">Home</Link></li>
                 <li><Link className={getLinkClass('/services')} to="/services">Services</Link></li>
                 <li><Link className={getLinkClass('/contact')} to="/contact">Contact Us</Link></li>

@@ -21,9 +21,17 @@ function footer() {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
       {/* Company Info */}
       <div className="space-y-4">
-        <div className="flex items-center">
+        <div className="flex items-center gap-3">
         
-          <h2 className="ml-2 text-xl font-bold">Vet <span className='text-gold-main'>Zone</span></h2>
+          <a
+    href="#"
+    className="text-3xl font-bold tracking-wide text-white transition-all duration-300 hover:scale-105"
+  >
+
+    <span className="bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent ml-1">
+      Mona
+    </span>
+  </a>
           <p>Professional Mobile Veterinary Services</p>
         </div>
         <p className="text-gray-400">Providing compassionate and professional mobile veterinary care for all animals across Kisii, Nyamira, and Nyanza regions.</p>
