@@ -1,5 +1,3 @@
-import React from 'react'
-
 /**
  * Global footer component.
  *
@@ -17,63 +15,137 @@ function footer() {
   return (
     <div>
       <footer className="bg-bg-black-main text-text-tertiary pt-12 pb-8">
-  <div className="container mx-auto px-4">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-      {/* Company Info */}
-      <div className="space-y-4">
-        <div className="flex items-center gap-3">
-        
-          <a
-    href="#"
-    className="text-3xl font-bold tracking-wide text-white transition-all duration-300 hover:scale-105"
-  >
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+            {/* Company Info */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <a
+                  href="/#"
+                  className="text-3xl font-bold tracking-wide text-white transition-all duration-300 hover:scale-105"
+                >
+                  <span className="bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent ml-1">
+                    Monna
+                  </span>
+                </a>
+                <p>Professional Mobile Veterinary Services</p>
+              </div>
+              <p className="text-gray-400">
+                Providing compassionate and professional mobile veterinary care
+                for all animals across Kisii, Nyamira, and Nyanza regions.
+              </p>
+            </div>
 
-    <span className="bg-gradient-to-r from-yellow-400 to-amber-600 bg-clip-text text-transparent ml-1">
-      Monna
-    </span>
-  </a>
-          <p>Professional Mobile Veterinary Services</p>
-        </div>
-        <p className="text-gray-400">Providing compassionate and professional mobile veterinary care for all animals across Kisii, Nyamira, and Nyanza regions.</p>
-        
-      </div>
+            {/* Quick Links */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Quick Links</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="/"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/services"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/contact"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-      {/* Quick Links */}
-      <div className="space-y-4">
-        <h3 className="text-lg font-semibold">Quick Links</h3>
-        <ul className="space-y-2">
-          <li><a href="/" className="text-gray-400 hover:text-white transition">Home</a></li>
-          <li><a href="/services" className="text-gray-400 hover:text-white transition">Services</a></li>
-          <li><a href="/contact" className="text-gray-400 hover:text-white transition">Contact Us</a></li>
-        </ul>
-      </div>
+            {/* Services */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Our Services</h3>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="/services"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Preventive Care
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/services"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Diagnostics
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/services"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Surgery
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/services"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    Emergency Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/services"
+                    className="text-gray-400 hover:text-white transition"
+                  >
+                    All Services
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-  {/* Services */}
-      <div className="space-y-4">
-        <h3 className="text-lg font-semibold">Our Services</h3>
-        <ul className="space-y-2">
-          <li><a href="/services" className="text-gray-400 hover:text-white transition">Preventive Care</a></li>
-          <li><a href="/services" className="text-gray-400 hover:text-white transition">Diagnostics</a></li>
-          <li><a href="/services" className="text-gray-400 hover:text-white transition">Surgery</a></li>
-          <li><a href="/services" className="text-gray-400 hover:text-white transition">Emergency Services</a></li>
-          <li><a href="/services" className="text-gray-400 hover:text-white transition">All Services</a></li>
-        </ul>
-      </div>
+            {/* Contact Us */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Contact Us</h3>
+              <div className="not-italic text-gray-400">
+                <p>
+                  <a
+                    href="tel:+254700000000"
+                    className="hover:text-white transition"
+                  >
+                    +254 700 000000
+                  </a>
+                </p>
+                <p className="mt-2">
+                  {" "}
+                  <a
+                    href="mailto:info@wecarevet.co.ke"
+                    className="hover:text-white transition"
+                  >
+                    info@wecarevet.co.ke
+                  </a>
+                </p>
+                <p>Kisii, Nyamira & Nyanza Regions</p>
+              </div>
+            </div>
+          </div>
 
-    {/* Contact Us */}
-      <div className="space-y-4">
-        <h3 className="text-lg font-semibold">Contact Us</h3>
-        <div className="not-italic text-gray-400">
-          <p><a href="tel:+254700000000" className="hover:text-white transition">+254 700 000000</a></p>
-          <p className="mt-2"> <a href="mailto:info@wecarevet.co.ke" className="hover:text-white transition">info@wecarevet.co.ke</a></p>
-          <p>Kisii, Nyamira & Nyanza Regions</p>
-        </div>
-      </div>
-    </div>
-
-    <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
-      <p className="text-gray-500 text-sm mb-4 md:mb-0">© 2026 VetZone Life Mobile Veterinary Services. All rights reserved.</p>
-      <div className="flex space-x-4">
+          <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-500 text-sm mb-4 md:mb-0">
+              © 2026 VetZone Life Mobile Veterinary Services. All rights
+              reserved.
+            </p>
+            {/* <div className="flex space-x-4">
           <a href="#" className="text-gray-400 hover:text-white transition">
             <span className="sr-only">Facebook</span>
             <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -98,12 +170,12 @@ function footer() {
               <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" />
             </svg>
           </a>
+        </div> */}
+          </div>
         </div>
+      </footer>
     </div>
-  </div>
-</footer>
-    </div>
-  )
+  );
 }
 
-export default footer
+export default footer;
